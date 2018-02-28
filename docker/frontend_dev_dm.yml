@@ -1,0 +1,28 @@
+# DEVELOMENT
+version: "3.2"
+services:
+  frontend:
+    container_name: gmail-dev
+    build:
+      context: .
+      dockerfile: gmail_dev/Dockerfile
+    image: gmail_dev
+    volumes:
+      - ../:/app
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+    ports:
+      - "9230:9230"
+      - "9250:9250"
+      - "9270:9270"
+      - "9290:9290"
+    privileged: true
+    stdin_open: true
+    tty: true
+  nginx:
+    container_name: gmail-nginx-dev
+    image: gmail_nginx_dev
+    build: ./gmail_nginx_dev
+    ports:
+      - "8080:80"
+      - "8081:443"

@@ -1,0 +1,23 @@
+apps:
+  - name: gmail
+    script: node_modules/webpack/bin/webpack.js
+    args: --config @gmail/server/webpack.config.js
+    merge_logs: true
+    out_file: /var/log/gmail.log
+    error_file: /var/log/gmail.log
+    source_map_support: true
+  - name: client
+    script: node_modules/webpack-dev-server/bin/webpack-dev-server.js
+    args: --config config/client.webpack.config.js
+    merge_logs: true
+    out_file: /var/log/client.log
+    error_file: /var/log/client.log
+    env:
+        NODE_ENV: development
+  - name: graphql
+    script: node_modules/webpack/bin/webpack.js
+    args: --config @graphql/webpack.config.js
+    merge_logs: true
+    out_file: /var/log/graphql.log
+    error_file: /var/log/graphql.log
+    source_map_support: true

@@ -1,0 +1,38 @@
+# PRODUCTION
+version: "3.3"
+services:
+  gmail:
+    container_name: gmail-frontend
+    command: pm2-docker start config/pm2/production/gmail.yml
+    build:
+      context: .
+      dockerfile: gmail/Dockerfile
+    image: gmail
+    volumes:
+      - ../:/app
+    ports:
+      - "3030:3030"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+  graphql:
+    container_name: gmail-graphql
+    command: pm2-docker start config/pm2/production/graphql.yml
+    build:
+      context: .
+      dockerfile: gmail/Dockerfile
+    image: graphql
+    volumes:
+      - ../:/app
+    ports:
+      - "3090:3090"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+  nginx:
+    container_name: gmail-nginx
+    image: gmail_nginx
+    build: ./gmail_nginx
+    ports:
+      - "8080:80"
+      - "8081:443"
+    volumes:
+      - ../:/app

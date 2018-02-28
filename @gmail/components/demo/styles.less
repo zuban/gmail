@@ -1,0 +1,92 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+
+    .leftWrapper {
+        width: 20%;
+        z-index: 1;
+
+        .bar {
+            background: rgb(255, 255, 255);
+            color: black;
+
+            h1 {
+                font-weight: 500;
+            }
+        }
+    }
+
+    .rightWrapper {
+        width: 80%;
+        background: rgb(206, 206, 206);
+        .bar {
+            background: rgb(255, 255, 255);
+            color: black;
+
+            h1 {
+                font-weight: 500;
+            }
+        }
+
+        .table {
+            margin: 50px;
+            background: white;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+            border-radius: 2px;
+
+            .input {
+                margin-right: 10px;
+            }
+
+            .usersWrapper {
+
+                .user {
+                    font-family: Roboto;
+                    display: flex;
+                    height: 100%;
+                    height: 70px;
+                    color: rgb(117, 117, 117);
+
+                    .account {
+                        text-align: center;
+                        width: 10%;
+                        align-self: center;
+
+                        span {
+                            font-size: 44px;
+                        }
+                    }
+                    .accountDetails {
+                        width: 40%;
+                        align-self: center;
+
+                        .name {
+                            color: black
+                        }
+                        .email {
+
+                        }
+                    }
+                    .registerDate {
+                        width: 20%;
+                        align-self: center;
+                    }
+                    .date {
+                        width: 20%;
+                        align-self: center;
+                    }
+                    .settings {
+                        text-align: center;
+                        width: 10%;
+                        align-self: center;
+                    }
+                }
+                .divider {
+                    width: 90%;
+                    margin-left: 10%;
+                    border-bottom: 1px solid #e0e0e0;
+                }
+            }
+        }
+    }
+}

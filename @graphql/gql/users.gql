@@ -1,0 +1,7 @@
+query Users($query: String) {
+  users(query: $query) {
+      success
+      errors
+      data
+  }
+}

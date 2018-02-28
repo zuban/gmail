@@ -1,0 +1,20 @@
+{
+  "name": "react-lazy-load",
+  "version": "0.0.1",
+  "description": "React lazy load and parallax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Andrey Koperskiy",
+    "email": "github@teux.ru",
+    "url": "https://github.com/teux"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "hoist-non-react-statics": "^2.3.1",
+    "invariant": "^2.2.2",
+    "prop-types": "^15.5.10"
+  }
+}

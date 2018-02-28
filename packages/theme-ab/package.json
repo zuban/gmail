@@ -1,0 +1,25 @@
+{
+    "name": "theme",
+    "version": "0.0.1",
+    "description": "Common UI styles and resources",
+    "main": "index.js",
+    "scripts": {
+        "postinstall": "npm run semantic",
+        "semantic": "webpack --config ./semantic/webpack.config.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "css-loader": "^0.28.7",
+        "extract-loader": "^1.0.1",
+        "file-loader": "^1.1.5",
+        "less": "^2.7.2",
+        "less-loader": "^4.0.5",
+        "less-plugin-autoprefix": "^1.5.1",
+        "on-build-webpack": "^0.1.0",
+        "react-toolbox": "^2.0.0-beta.12",
+        "semantic-ui-less": "^2.2.12",
+        "webpack": "^3.7.1"
+    }
+}

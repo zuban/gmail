@@ -1,0 +1,16 @@
+apps:
+  - name: gmail
+    script: node_modules/webpack/bin/webpack.js
+    args: --config @gmail/server/webpack.config.js
+    max_memory_restart: 1G
+    min_uptime: 1000
+    kill_timeout: 3000
+    autorestart: true
+    max_restarts: 5
+    merge_logs: true
+    out_file: ./gmail.log
+    error_file: ./gmail.log
+    # Every 3 days will be respawned
+    cron_restart: "0 0 */3 * *"
+    env:
+        NODE_ENV: production
