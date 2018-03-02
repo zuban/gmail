@@ -13,3 +13,8 @@ install gulp globally
 npm install gulp -g
 ```
 
+start docker-compose:
+```
+cd docker
+./start_frontend.sh
+```
