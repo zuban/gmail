@@ -1,7 +1,7 @@
 // Create library bundles
 const path = require('path');
 const webpack = require('webpack');
-const CompressionPlugin = require('zopfli-webpack-plugin');
+// const CompressionPlugin = require('zopfli-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const __PRODUCTION__ = process.env.NODE_ENV === 'production';
@@ -143,9 +143,9 @@ if (__PRODUCTION__) {
     config.plugins = [
         ...config.plugins,
         new webpack.optimize.UglifyJsPlugin(),
-        new CompressionPlugin({
-            asset: '[path].gz',
-        }),
+        // new CompressionPlugin({
+        //     asset: '[path].gz',
+        // }),
     ];
 }
 
